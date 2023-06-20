@@ -1,5 +1,7 @@
-import GameSavingLoader from "../GameSavingLoader";
 import { test, expect } from '@jest/globals';
+
+import GameSavingLoader from "../GameSavingLoader";
+
 import GameSaving from "../GameSaving";
 
 test('GameSavingLoader - должен разрешать промис и создавать экземпляр GameSaving', async () => {
@@ -25,7 +27,6 @@ test('GameSavingLoader - должен разрешать промис и соз�
     expect(gameSaving.userInfo.level).toEqual(expectedData.userInfo.level);
     expect(gameSaving.userInfo.points).toEqual(expectedData.userInfo.points);
   } catch (error) {
-    // Обработка ошибок, если промис отклонен
     expect(error).toBeInstanceOf(Error);
   }
 });
