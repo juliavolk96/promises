@@ -1,8 +1,8 @@
 import { test, expect } from '@jest/globals';
 
-import GameSavingLoader from "../GameSavingLoader";
+import GameSavingLoader from '../GameSavingLoader';
 
-import GameSaving from "../GameSaving";
+import GameSaving from '../GameSaving';
 
 test('GameSavingLoader - должен разрешать промис и создавать экземпляр GameSaving', async () => {
   const expectedData = {
