@@ -6,8 +6,11 @@
 // console.log(sum([1, 2]));
 import GameSavingLoader from './GameSavingLoader';
 
-GameSavingLoader.load().then((saving) => {
-  console.log(saving);
-}).catch((error) => {
-  console.error(error);
-});
+(async () => {
+  try {
+    const gameSaving = await GameSavingLoader.load();
+    console.log(gameSaving);
+  } catch (error) {
+    console.error(error);
+  }
+})();
